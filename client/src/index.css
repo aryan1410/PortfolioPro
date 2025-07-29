@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    background-image: url("https://img.freepik.com/free-vector/abstract-black-lines-geometric-background_677411-2748.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+}
+
+@layer components {
+  .glass-effect {
+    background: rgba(45, 45, 45, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-link {
+    @apply transition-all duration-300 relative;
+  }
+
+  .nav-link:hover {
+    @apply text-blue-400;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute w-0 h-0.5 -bottom-1 left-1/2 bg-blue-400 transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full left-0;
+  }
+
+  .skill-tag {
+    @apply transition-all duration-300 cursor-pointer;
+  }
+
+  .skill-tag:hover {
+    @apply bg-blue-600 transform -translate-y-0.5;
+  }
+
+  .carousel-container {
+    @apply overflow-hidden w-full;
+  }
+
+  .carousel-slide {
+    @apply flex w-full;
+    animation: carousel 20s linear infinite;
+  }
+
+  .carousel-slide:hover {
+    animation-play-state: paused;
+  }
+
+  .project-card {
+    @apply flex-none transition-all duration-300;
+    flex: 0 0 12.5%;
+  }
+
+  .project-card:hover {
+    @apply scale-105;
+  }
+
+  .expandable-section {
+    @apply max-h-0 overflow-hidden transition-all duration-300 ease-out;
+  }
+
+  .expandable-section.expanded {
+    max-height: 2000px;
+  }
+
+  @keyframes carousel {
+    0% { transform: translateX(0%); }
+    11.11% { transform: translateX(0%); }
+    12.5% { transform: translateX(-100%); }
+    23.61% { transform: translateX(-100%); }
+    25% { transform: translateX(-200%); }
+    36.11% { transform: translateX(-200%); }
+    37.5% { transform: translateX(-300%); }
+    48.61% { transform: translateX(-300%); }
+    50% { transform: translateX(-400%); }
+    61.11% { transform: translateX(-400%); }
+    62.5% { transform: translateX(-500%); }
+    73.61% { transform: translateX(-500%); }
+    75% { transform: translateX(-600%); }
+    86.11% { transform: translateX(-600%); }
+    87.5% { transform: translateX(-700%); }
+    98.61% { transform: translateX(-700%); }
+    100% { transform: translateX(0%); }
+  }
+
+  @keyframes slideUp {
+    0% { transform: translateY(30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+}
