@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import uscLogo from "@assets/usc_1753825977848.png";
+import nmimsLogo from "@assets/nmims_1753825977848.png";
 
 export default function Education() {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
@@ -19,7 +21,7 @@ export default function Education() {
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-6">
                 <img 
-                  src="https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/USC-viterbi.png" 
+                  src={uscLogo} 
                   alt="USC Logo" 
                   className="w-24 h-24 rounded-full object-cover"
                 />
@@ -52,8 +54,8 @@ export default function Education() {
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-6">
                 <img 
-                  src="https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/mpstme.png" 
-                  alt="NMIMS MPSTME Logo" 
+                  src={nmimsLogo} 
+                  alt="NMIMS Logo" 
                   className="w-24 h-24 rounded-full object-cover"
                 />
                 <div>
