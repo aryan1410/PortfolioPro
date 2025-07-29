@@ -91,15 +91,27 @@ export default function Experience() {
                   </li>
                   <li className="flex items-start space-x-3">
                     <Database className="text-green-400 mt-1 flex-shrink-0" size={16} />
-                    <span>Managed chatbot database operating MongoDB and SQL alike, deploying CI/CD pipelines and performed sentiment analysis models on 100 real time text messages from database.</span>
+                    <span>Managed chatbot database operating MongoDB and SQL alike, deploying CI/CD pipelines and performed sentiment analysis models on 100 real time text messages from database, exposing servers via safe tunnels using ngrok.</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <Users className="text-purple-400 mt-1 flex-shrink-0" size={16} />
-                    <span>Contextualized user query by maintaining conversation summaries and entities for every user in dedicated user profiles, and feeding LLM incremental summaries and entities for a new message in a user session for over 100 message conversations.</span>
+                    <span>Contextualized user query by maintaining conversation summaries and entities for every user in dedicated user profiles, and feeding LLM incremental summaries and entities for a new message in a user session for over 100 message conversations, using Langchain's buffer windows and custom trained entity extraction models.</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <TestTube className="text-orange-400 mt-1 flex-shrink-0" size={16} />
                     <span>Organized Postman flows to implement visual testing of chatbot API responses for 150 scenarios and operated field specific assertions to assert effectiveness of responses improving bug identification and resolution by over 100%.</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <TrendingUp className="text-yellow-400 mt-1 flex-shrink-0" size={16} />
+                    <span>Utilized LLM to optimize chat history summarizer for a user session via prompt engineering and string slicing techniques, optimizing summary length by 35% and boosting user engagement by personalized context preservation.</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <BarChart className="text-cyan-400 mt-1 flex-shrink-0" size={16} />
+                    <span>Built a synthetic dataset of product specific user journeys (over 5000 user messages) for evaluation of minimum viable product (MVP), fine tuning and training of custom LLMs tailored to chatbot, and saving 20% overall cost from OpenAI's API calls.</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <Layout className="text-red-400 mt-1 flex-shrink-0" size={16} />
+                    <span>Functioned as team lead for development of an automated end-to-end integration testing framework, which was benchmark for product launch, utilizing dataset by querying journey specific data to chatbot's API, recording latency, fluency, accuracy, and relevance to ground truth responses via separate evaluation pipelines for deterministic and non deterministic LLM responses, while saving failure reports to AWS S3.</span>
                   </li>
                 </ul>
               </div>
@@ -131,7 +143,7 @@ export default function Experience() {
                 <ul className="space-y-3 text-gray-300">
                   <li className="flex items-start space-x-3">
                     <BarChart className="text-blue-400 mt-1 flex-shrink-0" size={16} />
-                    <span>Led initiative to scrape over 10 years of bond yield data from CBIL Bond Index, RBI website. Pre-processed and cleaned it using data wrangling and mining techniques.</span>
+                    <span>Led initiative to scrape over 10 years of bond yield data from CBIL Bond Index, RBI website. Pre-processed and cleaned it using data wrangling and mining techniques, and condensed frequencies of secondly data points to aggregate frequencies of monthly data points to accommodate a broader timeline, showcasing leadership, adaptability and problem-solving.</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <Search className="text-green-400 mt-1 flex-shrink-0" size={16} />
