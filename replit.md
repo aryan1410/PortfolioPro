@@ -2,7 +2,14 @@
 
 ## Overview
 
-This is a personal portfolio website for Aryan Shah, a Computer Science graduate student at USC and former NLP Engineer at Elixir Equities. The application is built as a full-stack web application with a React frontend and Express backend, showcasing education, work experience, and personal projects in AI/ML and data science.
+This is a personal portfolio website for Aryan Shah, a Computer Science graduate student at USC and former NLP Engineer at Elixir Equities. The application is built as a full-stack web application with a React frontend and Express backend, showcasing education, work experience, and personal projects in AI/ML and data science. Successfully refactored from Streamlit to modern JavaScript/HTML/CSS with interactive animations and professional design.
+
+## Recent Changes
+
+- **January 29, 2025**: Completed full refactor from Streamlit to modern web technologies
+- **January 29, 2025**: Added comprehensive Contact section with working form
+- **January 29, 2025**: Added Organic Magazine business analyst intern experience
+- **January 29, 2025**: Implemented interactive project carousel and expandable sections
 
 ## User Preferences
 

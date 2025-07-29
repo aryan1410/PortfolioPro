@@ -19,7 +19,7 @@ export default function Experience() {
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-6">
                 <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" 
+          src="https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/USC-viterbi.png" 
                   alt="USC Research" 
                   className="w-24 h-24 rounded-full object-cover"
                 />
@@ -63,8 +63,7 @@ export default function Experience() {
           <div className="glass-effect rounded-3xl p-8 hover:scale-105 transition-all duration-300 cursor-pointer" onClick={() => toggleSection('elixir-nlp')}>
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-6">
-                <img 
-                  src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" 
+                <img              src="https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/elixir.png" 
                   alt="Elixir Equities" 
                   className="w-24 h-24 rounded-full object-cover"
                 />
@@ -111,8 +110,7 @@ export default function Experience() {
           <div className="glass-effect rounded-3xl p-8 hover:scale-105 transition-all duration-300 cursor-pointer" onClick={() => toggleSection('elixir-ds')}>
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-6">
-                <img 
-                  src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" 
+                <img           src="https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/elixir.png" 
                   alt="Data Science" 
                   className="w-24 h-24 rounded-full object-cover"
                 />
@@ -142,6 +140,54 @@ export default function Experience() {
                   <li className="flex items-start space-x-3">
                     <Layout className="text-purple-400 mt-1 flex-shrink-0" size={16} />
                     <span>Developed and deployed consolidated dashboard on Indian debt market, following standard Agile SDLC and project management principles using plotly as frontend, Browse AI for automated data scraping from websites into csv files.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Organic Magazine Business Analyst Intern */}
+          <div className="glass-effect rounded-3xl p-8 hover:scale-105 transition-all duration-300 cursor-pointer" onClick={() => toggleSection('organic')}>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-6">
+                <img 
+                  src="https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/organic.png" 
+                  alt="The Organic Magazine" 
+                  className="w-24 h-24 rounded-full object-cover"
+                />
+                <div>
+                  <h3 className="text-2xl font-bold">Business Analyst Intern</h3>
+                  <p className="text-xl text-gray-300">The Organic Magazine (Remote)</p>
+                  <p className="text-gray-400">August 2021 - November 2021</p>
+                </div>
+              </div>
+              <ChevronDown 
+                className={`transition-transform duration-300 ${expandedSection === 'organic' ? 'rotate-180' : ''}`}
+                size={24}
+              />
+            </div>
+            
+            <div className={`expandable-section mt-6 ${expandedSection === 'organic' ? 'expanded' : ''}`}>
+              <div className="bg-gray-800 rounded-xl p-6">
+                <div className="mb-4">
+                  <a href="https://theorganicmagazine.com/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Company Website</a>
+                </div>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-start space-x-3">
+                    <Search className="text-blue-400 mt-1 flex-shrink-0" size={16} />
+                    <span>Forming a network through various databases of corporates in and out of India in the organic field via research.</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <BarChart className="text-green-400 mt-1 flex-shrink-0" size={16} />
+                    <span>Analysis of the companies for business purposes and approaching them for features in the magazine on a regular basis.</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <Users className="text-purple-400 mt-1 flex-shrink-0" size={16} />
+                    <span>Research on highly active CSR firms in India to approach for webinars in order to spread awareness about organic products. Work collaboratively with rest of the team members.</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <TrendingUp className="text-orange-400 mt-1 flex-shrink-0" size={16} />
+                    <span>Pitching to various individuals or brands to bring in business and revenue for the company.</span>
                   </li>
                 </ul>
               </div>

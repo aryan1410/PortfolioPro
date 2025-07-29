@@ -2,8 +2,8 @@ export default function Projects() {
   const projects = [
     {
       title: "Little Go AI Agents",
-      image: "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
-      description: "This project builds intelligent agents to play a simplified 5x5 version of Go using a variety of AI techniques—minimax with alpha-beta pruning, greedy heuristics, and reinforcement learning. It includes self-play training, evaluation scripts, and multiple strategy agents to simulate intelligent gameplay.",
+image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/little_go.png",
+      description: "This project builds intelligent agents to play a simplified 5x5 version of Go using a variety of AI techniques—minimax with alpha-beta pruning, reinforcement learning, all through a custom developed reward-penalty heuristic based on the most optimal go playing strategies such as counter attck, atari, territory preservations, etc,. It includes self-play training, evaluation scripts, and multiple strategy agents to simulate intelligent gameplay.",
       applications: [
         "Strategy game AI development",
         "Reinforcement learning experimentation", 
@@ -14,7 +14,7 @@ export default function Projects() {
     },
     {
       title: "Expression-Based Music System", 
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/pedestrian.png",
       description: "This project detects a user's facial expression in real-time and recommends music that matches their emotional state. It uses a VGG19-based convolutional neural network trained on the FER2013 dataset to classify emotions into categories like happiness, sadness, anger, and more.",
       applications: [
         "Emotion-aware music players",
@@ -27,7 +27,7 @@ export default function Projects() {
     },
     {
       title: "Viterbi Temporal Reasoning",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200", 
+image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/viterbi.png", 
       description: "This project implements a Viterbi-based temporal reasoning agent to infer the most probable sequence of hidden states in a partially observable environment, specifically modeled around a 'Little Prince' scenario.",
       applications: [
         "Decision-making under uncertainty",
@@ -40,7 +40,7 @@ export default function Projects() {
     },
     {
       title: "Sequence Alignment Efficiency Analysis",
-      image: "https://images.unsplash.com/photo-1628595351029-c2bf17511435?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/memory.png",
       description: "This project solves the DNA sequence alignment problem using both a classic dynamic programming approach and a space-efficient variant. Given two base strings and duplication instructions, it recursively generates large DNA sequences and aligns them with minimal cost.",
       applications: [
         "Genomic sequence comparison",
@@ -53,7 +53,7 @@ export default function Projects() {
     },
     {
       title: "Pedestrian Detection",
-      image: "https://images.unsplash.com/photo-1573152958734-1922c188fba3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/pedestrian.png",
       description: "This project implements a pedestrian detection system by combining deep learning models and classical computer vision techniques. Using transfer learning with VGG19, ResNet101, and InceptionV3, the system classifies pedestrians from video frames.",
       applications: [
         "Autonomous vehicle pedestrian detection",
@@ -66,7 +66,7 @@ export default function Projects() {
     },
     {
       title: "Confused Student Simulator",
-      image: "https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/confusion.png",
       description: "A conversational AI that mimics a confused yet intelligent student, generating naive or follow-up questions from lecture materials (text, PDFs, videos, YouTube links). It uses LLMs and ASR to simulate misunderstandings and engage users in a five-turn dialogue.",
       applications: [
         "Lecture debugging before delivery",
