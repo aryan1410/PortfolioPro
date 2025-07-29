@@ -6,6 +6,8 @@ This is a personal portfolio website for Aryan Shah, a Computer Science graduate
 
 ## Recent Changes
 
+- **January 29, 2025**: Integrated professional banner image showcasing technical skills (AI, ML, NLP, Full Stack)
+- **January 29, 2025**: Implemented complete contact form system with email integration via SendGrid
 - **January 29, 2025**: Completed full refactor from Streamlit to modern web technologies
 - **January 29, 2025**: Added comprehensive Contact section with working form
 - **January 29, 2025**: Added Organic Magazine business analyst intern experience

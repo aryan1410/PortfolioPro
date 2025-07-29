@@ -1,15 +1,16 @@
 import { Github, Linkedin } from "lucide-react";
+import bannerImage from "@assets/banner_1753828190855.png";
 
 export default function Hero() {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-20">
       <div className="max-w-6xl mx-auto px-4 text-center">
-        {/* Hero Banner */}
+        {/* Professional Banner */}
         <div className="mb-8 animate-fade-in">
           <img 
-            src="https://pixabay.com/get/g0177161f4aed09a5beb840f2cb5d5b6caea0b6661f865a24781571c8581f8c498eca008b4c72402fd4031b73eb3e7598fa488e2f84e0d205e732dc62ee5be4b8_1280.jpg" 
-            alt="Professional banner" 
-            className="w-full h-64 object-cover rounded-2xl shadow-2xl"
+            src={bannerImage} 
+            alt="Aryan Shah - Computer Science Portfolio Banner showcasing skills in AI, ML, NLP, and Full Stack Development" 
+            className="w-full h-auto max-h-80 object-contain rounded-2xl shadow-2xl bg-gradient-to-r from-gray-900 to-black"
           />
         </div>
 
