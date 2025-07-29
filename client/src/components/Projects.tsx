@@ -1,8 +1,18 @@
+import { 
+  GoGameGraphic, 
+  DataScienceGraphic, 
+  NLPGraphic, 
+  WebDevGraphic, 
+  MLGraphic, 
+  DatabaseGraphic 
+} from "./ProjectGraphics";
+
 export default function Projects() {
   const projects = [
     {
       title: "Little Go AI Agents",
-image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/little_go.png",
+      image: "https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/little_go.png",
+      graphic: <GoGameGraphic />,
       description: "This project builds intelligent agents to play a simplified 5x5 version of Go using a variety of AI techniques—minimax with alpha-beta pruning, reinforcement learning, all through a custom developed reward-penalty heuristic based on the most optimal go playing strategies such as counter attck, atari, territory preservations, etc,. It includes self-play training, evaluation scripts, and multiple strategy agents to simulate intelligent gameplay.",
       applications: [
         "Strategy game AI development",
@@ -14,7 +24,8 @@ image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/littl
     },
     {
       title: "Expression-Based Music System", 
-image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/expression_music.png",
+      image: "https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/expression_music.png",
+      graphic: <MLGraphic />,
       description: "This project detects a user's facial expression in real-time and recommends music that matches their emotional state. It uses a VGG19-based convolutional neural network trained on the FER2013 dataset to classify emotions into categories like happiness, sadness, anger, and more.",
       applications: [
         "Emotion-aware music players",
@@ -27,7 +38,8 @@ image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/expre
     },
     {
       title: "Viterbi Temporal Reasoning",
-image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/viterbi.png", 
+      image: "https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/viterbi.png", 
+      graphic: <DataScienceGraphic />,
       description: "This project implements a Viterbi-based temporal reasoning agent to infer the most probable sequence of hidden states in a partially observable environment, specifically modeled around a 'Little Prince' scenario.",
       applications: [
         "Decision-making under uncertainty",
@@ -40,7 +52,8 @@ image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/viter
     },
     {
       title: "Sequence Alignment Efficiency Analysis",
-image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/memory.png",
+      image: "https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/memory.png",
+      graphic: <DatabaseGraphic />,
       description: "This project solves the DNA sequence alignment problem using both a classic dynamic programming approach and a space-efficient variant. Given two base strings and duplication instructions, it recursively generates large DNA sequences and aligns them with minimal cost.",
       applications: [
         "Genomic sequence comparison",
@@ -53,7 +66,8 @@ image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/memor
     },
     {
       title: "Pedestrian Detection",
-image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/pedestrian.png",
+      image: "https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/pedestrian.png",
+      graphic: <MLGraphic />,
       description: "This project implements a pedestrian detection system by combining deep learning models and classical computer vision techniques. Using transfer learning with VGG19, ResNet101, and InceptionV3, the system classifies pedestrians from video frames.",
       applications: [
         "Autonomous vehicle pedestrian detection",
@@ -66,7 +80,8 @@ image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/pedes
     },
     {
       title: "Confused Student Simulator",
-image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/confusion.png",
+      image: "https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/confusion.png",
+      graphic: <NLPGraphic />,
       description: "A conversational AI that mimics a confused yet intelligent student, generating naive or follow-up questions from lecture materials (text, PDFs, videos, YouTube links). It uses LLMs and ASR to simulate misunderstandings and engage users in a five-turn dialogue.",
       applications: [
         "Lecture debugging before delivery",
@@ -92,11 +107,21 @@ image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/confu
               className="glass-effect rounded-3xl p-6 hover:scale-105 transition-all duration-300 animate-float"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <img 
-                src={project.image} 
-                alt={project.title} 
-                className="w-full h-48 object-cover rounded-xl mb-4"
-              />
+              {/* Split Image and Graphic Container */}
+              <div className="mb-4 h-48 flex gap-2">
+                {/* Main Project Image */}
+                <div className="w-2/3 h-full">
+                  <img 
+                    src={project.image} 
+                    alt={project.title} 
+                    className="w-full h-full object-cover rounded-xl"
+                  />
+                </div>
+                {/* Custom Interactive Graphic */}
+                <div className="w-1/3 h-full bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-2 border border-gray-600">
+                  {project.graphic}
+                </div>
+              </div>
               <h3 className="text-xl font-bold mb-2">{project.title}</h3>
               <p className="text-gray-400 text-sm mb-4 line-clamp-3">
                 {project.description}
