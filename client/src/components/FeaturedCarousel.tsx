@@ -1,16 +1,15 @@
 export default function FeaturedCarousel() {
   const projects = [
     {
-      title: "Game Playing Agents",
-      image: "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+      title: "Game Playing Agents", image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/little_go.png"
     },
     {
       title: "Confused Student Simulator",
-      image: "https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/confusion.png"
     },
     {
       title: "Emotion-Based Music Recommender",
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/expression_music.png"
     },
     {
       title: "Pedestrian Detection",
@@ -18,19 +17,19 @@ export default function FeaturedCarousel() {
     },
     {
       title: "Viterbi Temporal Reasoning",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/viterbi.png"
     },
     {
       title: "Sequence Alignment",
-      image: "https://images.unsplash.com/photo-1628595351029-c2bf17511435?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+  image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/memory.png"
     },
     {
       title: "NLP Engineer @ Elixir",
-      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+  image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/elixir.png"
     },
     {
       title: "Research Assistant @ USC",
-      image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+      image: "https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/USC-viterbi.png"
     }
   ];
 

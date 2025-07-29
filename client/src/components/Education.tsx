@@ -19,7 +19,7 @@ export default function Education() {
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-6">
                 <img 
-                  src="https://pixabay.com/get/g005240dad1f3781054e086e3668c3e0224866307e63ab3593a990e2b0d9e3f745b0e632ab55167dde8deb2e7ba2e2b5b44b57d94d904837b1561f7e1f2e6b2be_1280.jpg" 
+                  src="https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/USC-viterbi.png" 
                   alt="USC Logo" 
                   className="w-24 h-24 rounded-full object-cover"
                 />
@@ -52,8 +52,8 @@ export default function Education() {
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-6">
                 <img 
-                  src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" 
-                  alt="NMIMS Logo" 
+                  src="https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/mpstme.png" 
+                  alt="NMIMS MPSTME Logo" 
                   className="w-24 h-24 rounded-full object-cover"
                 />
                 <div>

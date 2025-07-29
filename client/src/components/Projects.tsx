@@ -14,7 +14,7 @@ image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/littl
     },
     {
       title: "Expression-Based Music System", 
-image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/pedestrian.png",
+image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/expression_music.png",
       description: "This project detects a user's facial expression in real-time and recommends music that matches their emotional state. It uses a VGG19-based convolutional neural network trained on the FER2013 dataset to classify emotions into categories like happiness, sadness, anger, and more.",
       applications: [
         "Emotion-aware music players",
