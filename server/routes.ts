@@ -37,7 +37,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       if (emailSent) {
         console.log("✅ Email sent successfully");
       } else {
-        console.log("📧 Message stored successfully. Email delivery pending SendGrid setup.");
+        console.log("📧 Message stored successfully. Email delivery pending email credentials setup.");
         console.log("📝 Contact Details:", {
           name: contactMessage.name,
           email: contactMessage.email,
