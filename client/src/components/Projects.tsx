@@ -137,17 +137,12 @@ export default function Projects() {
                 />
               </div>
               
-              <p className="text-gray-400 text-sm mb-4 line-clamp-3">
+              <p className={`text-gray-400 text-sm mb-4 ${expandedProject === index ? '' : 'line-clamp-3'}`}>
                 {project.description}
               </p>
               
               <div className={`expandable-section ${expandedProject === index ? 'expanded' : ''}`}>
                 <div className="space-y-4">
-                  <div>
-                    <h4 className="text-sm font-semibold text-gray-300 mb-2">Full Description:</h4>
-                    <p className="text-gray-400 text-sm">{project.description}</p>
-                  </div>
-                  
                   <div>
                     <h4 className="text-sm font-semibold text-gray-300 mb-2">All Applications:</h4>
                     <div className="flex flex-wrap gap-1">
