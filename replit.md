@@ -6,6 +6,7 @@ This is a personal portfolio website for Aryan Shah, a Computer Science graduate
 
 ## Recent Changes
 
+- **January 29, 2025**: Created comprehensive project description and tech stack documentation
 - **January 29, 2025**: Enhanced Elixir Equities experience sections with complete details from original app
 - **January 29, 2025**: Created custom interactive graphics for all projects (Go game, neural networks, data science, etc.)
 - **January 29, 2025**: Integrated professional banner image showcasing technical skills (AI, ML, NLP, Full Stack)
