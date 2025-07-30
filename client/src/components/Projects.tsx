@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { ChevronDown } from 'lucide-react';
 import { 
   GoGameGraphic, 
   DataScienceGraphic, 
@@ -8,6 +10,11 @@ import {
 } from "./ProjectGraphics";
 
 export default function Projects() {
+  const [expandedProject, setExpandedProject] = useState<number | null>(null);
+
+  const toggleProject = (index: number) => {
+    setExpandedProject(expandedProject === index ? null : index);
+  };
   const projects = [
     {
       title: "Little Go AI Agents",
@@ -104,8 +111,8 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="glass-effect rounded-3xl p-6 hover:scale-105 transition-all duration-300 animate-float"
-              style={{ animationDelay: `${index * 0.2}s` }}
+              className="glass-effect rounded-3xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer"
+              onClick={() => toggleProject(index)}
             >
               {/* Split Image and Graphic Container */}
               <div className="mb-4 h-48 flex gap-2">
@@ -122,28 +129,68 @@ export default function Projects() {
                   {project.graphic}
                 </div>
               </div>
-              <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="text-xl font-bold">{project.title}</h3>
+                <ChevronDown 
+                  className={`transition-transform duration-300 ${expandedProject === index ? 'rotate-180' : ''}`}
+                  size={20}
+                />
+              </div>
+              
               <p className="text-gray-400 text-sm mb-4 line-clamp-3">
                 {project.description}
               </p>
-              <div className="mb-4">
-                <h4 className="text-sm font-semibold text-gray-300 mb-2">Applications:</h4>
-                <div className="flex flex-wrap gap-1">
-                  {project.applications.slice(0, 3).map((app, appIndex) => (
-                    <span key={appIndex} className="text-xs bg-blue-600 bg-opacity-50 px-2 py-1 rounded">
-                      {app}
-                    </span>
-                  ))}
+              
+              <div className={`expandable-section ${expandedProject === index ? 'expanded' : ''}`}>
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="text-sm font-semibold text-gray-300 mb-2">Full Description:</h4>
+                    <p className="text-gray-400 text-sm">{project.description}</p>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-sm font-semibold text-gray-300 mb-2">All Applications:</h4>
+                    <div className="flex flex-wrap gap-1">
+                      {project.applications.map((app, appIndex) => (
+                        <span key={appIndex} className="text-xs bg-blue-600 bg-opacity-50 px-2 py-1 rounded">
+                          {app}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <a 
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    View on GitHub →
+                  </a>
                 </div>
               </div>
-              <a 
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm"
-              >
-                View on GitHub →
-              </a>
+              
+              {expandedProject !== index && (
+                <div className="flex justify-between items-center">
+                  <div className="flex flex-wrap gap-1">
+                    {project.applications.slice(0, 2).map((app, appIndex) => (
+                      <span key={appIndex} className="text-xs bg-blue-600 bg-opacity-50 px-2 py-1 rounded">
+                        {app}
+                      </span>
+                    ))}
+                  </div>
+                  <a 
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    GitHub →
+                  </a>
+                </div>
+              )}
             </div>
           ))}
         </div>

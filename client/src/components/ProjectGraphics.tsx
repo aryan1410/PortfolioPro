@@ -29,7 +29,7 @@ export const GoGameGraphic = () => (
     <circle cx="140" cy="80" r="8" fill="#fff" stroke="#000" strokeWidth="1"/>
     
     {/* AI thinking indicator */}
-    <g className="animate-pulse">
+    <g>
       <circle cx="160" cy="40" r="15" fill="rgba(59, 130, 246, 0.2)" stroke="#3B82F6" strokeWidth="2"/>
       <text x="160" y="45" textAnchor="middle" fill="#3B82F6" fontSize="12" fontWeight="bold">AI</text>
     </g>
@@ -67,7 +67,7 @@ export const DataScienceGraphic = () => (
     <rect x="65" y="100" width="12" height="70" fill="#34d399"/>
     
     {/* Neural network nodes */}
-    <g className="animate-pulse">
+    <g>
       <circle cx="160" cy="120" r="6" fill="#f59e0b"/>
       <circle cx="175" cy="100" r="6" fill="#f59e0b"/>
       <circle cx="175" cy="140" r="6" fill="#f59e0b"/>
@@ -93,7 +93,7 @@ export const NLPGraphic = () => (
     <text x="30" y="55" fill="#a7f3d0" fontSize="12">Natural Language Processing</text>
     
     {/* Word embeddings */}
-    <g className="animate-pulse">
+    <g>
       <rect x="30" y="80" width="40" height="8" fill="#10b981" rx="4"/>
       <rect x="80" y="80" width="30" height="8" fill="#059669" rx="4"/>
       <rect x="120" y="80" width="50" height="8" fill="#10b981" rx="4"/>
@@ -143,7 +143,7 @@ export const WebDevGraphic = () => (
     <rect x="50" y="120" width="70" height="6" fill="#f59e0b" rx="3"/>
     
     {/* Interactive elements */}
-    <g className="animate-pulse">
+    <g>
       <rect x="110" y="75" width="45" height="15" fill="#10b981" rx="7"/>
       <text x="132" y="85" textAnchor="middle" fill="white" fontSize="8">Button</text>
     </g>
