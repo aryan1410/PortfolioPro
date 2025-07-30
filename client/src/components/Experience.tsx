@@ -1,6 +1,11 @@
 import { useState } from "react";
 import { ChevronDown, Brain, Eye, TrendingUp, Bot, Database, Users, TestTube, BarChart, Search, Layout } from "lucide-react";
 
+// Import local assets
+import elixirLogo from "@assets/elixir_1753848924870.png";
+import organicLogo from "@assets/organic_1753848924871.png";
+import uscViterbiLogo from "@assets/USC-viterbi_1753848924872.png";
+
 export default function Experience() {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
 
@@ -19,7 +24,7 @@ export default function Experience() {
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-6">
                 <img 
-          src="https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/USC-viterbi.png" 
+                  src={uscViterbiLogo} 
                   alt="USC Research" 
                   className="w-24 h-24 rounded-full object-cover"
                 />
@@ -63,7 +68,8 @@ export default function Experience() {
           <div className="glass-effect rounded-3xl p-8 hover:scale-105 transition-all duration-300 cursor-pointer" onClick={() => toggleSection('elixir-nlp')}>
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-6">
-                <img              src="https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/elixir.png" 
+                <img 
+                  src={elixirLogo} 
                   alt="Elixir Equities" 
                   className="w-24 h-24 rounded-full object-cover"
                 />
@@ -122,7 +128,8 @@ export default function Experience() {
           <div className="glass-effect rounded-3xl p-8 hover:scale-105 transition-all duration-300 cursor-pointer" onClick={() => toggleSection('elixir-ds')}>
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-6">
-                <img           src="https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/elixir.png" 
+                <img 
+                  src={elixirLogo} 
                   alt="Data Science" 
                   className="w-24 h-24 rounded-full object-cover"
                 />
@@ -163,7 +170,7 @@ export default function Experience() {
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-6">
                 <img 
-                  src="https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/organic.png" 
+                  src={organicLogo} 
                   alt="The Organic Magazine" 
                   className="w-24 h-24 rounded-full object-cover"
                 />
