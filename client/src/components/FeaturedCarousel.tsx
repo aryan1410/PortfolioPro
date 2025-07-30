@@ -50,14 +50,14 @@ export default function FeaturedCarousel() {
         <h2 className="text-4xl font-bold text-center mb-12 animate-slide-up">Featured Projects</h2>
         
         <div className="glass-effect rounded-3xl p-8 mb-12">
-          <div className="carousel-container rounded-2xl overflow-hidden">
+          <div className="carousel-container rounded-2xl overflow-hidden bg-gray-900/30">
             <div className="carousel-slide">
               {projects.map((project, index) => (
                 <div key={index} className="project-card p-6 text-center">
                   <img 
                     src={project.image} 
                     alt={project.title} 
-                    className="w-full h-48 object-cover rounded-lg mb-4"
+                    className="w-full h-48 object-contain bg-gray-800/50 rounded-lg mb-4 p-2"
                   />
                   <h4 className="text-lg font-semibold">{project.title}</h4>
                 </div>

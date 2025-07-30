@@ -86,7 +86,8 @@
 
   .project-card {
     @apply flex-none transition-all duration-300;
-    flex: 0 0 12.5%;
+    flex: 0 0 25%;
+    min-width: 300px;
   }
 
   .project-card:hover {
@@ -103,22 +104,19 @@
 
   @keyframes carousel {
     0% { transform: translateX(0%); }
-    11.11% { transform: translateX(0%); }
-    12.5% { transform: translateX(-100%); }
-    23.61% { transform: translateX(-100%); }
-    25% { transform: translateX(-200%); }
-    36.11% { transform: translateX(-200%); }
-    37.5% { transform: translateX(-300%); }
-    48.61% { transform: translateX(-300%); }
-    50% { transform: translateX(-400%); }
-    61.11% { transform: translateX(-400%); }
-    62.5% { transform: translateX(-500%); }
-    73.61% { transform: translateX(-500%); }
-    75% { transform: translateX(-600%); }
-    86.11% { transform: translateX(-600%); }
-    87.5% { transform: translateX(-700%); }
-    98.61% { transform: translateX(-700%); }
-    100% { transform: translateX(0%); }
+    12.5% { transform: translateX(0%); }
+    15% { transform: translateX(-25%); }
+    27.5% { transform: translateX(-25%); }
+    30% { transform: translateX(-50%); }
+    42.5% { transform: translateX(-50%); }
+    45% { transform: translateX(-75%); }
+    57.5% { transform: translateX(-75%); }
+    60% { transform: translateX(-100%); }
+    72.5% { transform: translateX(-100%); }
+    75% { transform: translateX(-125%); }
+    87.5% { transform: translateX(-125%); }
+    90% { transform: translateX(-150%); }
+    100% { transform: translateX(-150%); }
   }
 
   @keyframes slideUp {
