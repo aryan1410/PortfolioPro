@@ -1,6 +1,7 @@
 import { spawn } from 'child_process';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { sendContactEmailFallback } from './email_fallback';
 
 // Get __dirname equivalent for ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -26,6 +27,18 @@ export async function sendContactEmail(params: ContactEmailParams): Promise<bool
     return false;
   }
 
+  // Try Python email first, fallback to Node.js implementation
+  const pythonSuccess = await sendPythonEmail(params);
+  
+  if (pythonSuccess) {
+    return true;
+  } else {
+    console.log('🔄 Python email failed, trying Node.js fallback...');
+    return await sendContactEmailFallback(params);
+  }
+}
+
+async function sendPythonEmail(params: ContactEmailParams): Promise<boolean> {
   return new Promise((resolve) => {
     try {
       const pythonScriptPath = path.join(__dirname, 'email_sender.py');
