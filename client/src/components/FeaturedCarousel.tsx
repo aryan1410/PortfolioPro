@@ -1,35 +1,46 @@
+// Import local assets
+import littleGoImage from "@assets/little_go_1753848924870.png";
+import confusionImage from "@assets/confusion_1753848924852.png";
+import expressionMusicImage from "@assets/expression_music_1753848924870.png";
+import pedestrianImage from "@assets/pedestrian_1753848924872.png";
+import viterbiImage from "@assets/viterbi_1753848924872.png";
+import memoryImage from "@assets/memory_1753848924871.png";
+import elixirImage from "@assets/elixir_1753848924870.png";
+import uscViterbiImage from "@assets/USC-viterbi_1753848924872.png";
+
 export default function FeaturedCarousel() {
   const projects = [
     {
-      title: "Game Playing Agents", image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/little_go.png"
+      title: "Game Playing Agents", 
+      image: littleGoImage
     },
     {
       title: "Confused Student Simulator",
-image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/confusion.png"
+      image: confusionImage
     },
     {
       title: "Emotion-Based Music Recommender",
-image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/expression_music.png"
+      image: expressionMusicImage
     },
     {
       title: "Pedestrian Detection",
-      image: "https://images.unsplash.com/photo-1573152958734-1922c188fba3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+      image: pedestrianImage
     },
     {
       title: "Viterbi Temporal Reasoning",
-image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/viterbi.png"
+      image: viterbiImage
     },
     {
       title: "Sequence Alignment",
-  image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/memory.png"
+      image: memoryImage
     },
     {
       title: "NLP Engineer @ Elixir",
-  image:"https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/elixir.png"
+      image: elixirImage
     },
     {
       title: "Research Assistant @ USC",
-      image: "https://raw.githubusercontent.com/aryan1410/portfolio/master/assets/USC-viterbi.png"
+      image: uscViterbiImage
     }
   ];
 
