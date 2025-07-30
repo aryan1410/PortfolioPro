@@ -6,6 +6,7 @@ This is a personal portfolio website for Aryan Shah, a Computer Science graduate
 
 ## Recent Changes
 
+- **January 30, 2025**: Replaced SendGrid with Python smtplib email system using native SMTP libraries
 - **January 29, 2025**: Replaced all external GitHub image URLs with local asset imports for faster loading
 - **January 29, 2025**: Created comprehensive project description and tech stack documentation
 - **January 29, 2025**: Enhanced Elixir Equities experience sections with complete details from original app

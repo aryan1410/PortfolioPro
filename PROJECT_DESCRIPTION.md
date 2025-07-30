@@ -24,7 +24,7 @@ This is a modern, interactive portfolio website showcasing Aryan Shah's professi
 ### Backend Features
 - **RESTful API**: Clean API endpoints for data management and email functionality
 - **Database Integration**: PostgreSQL database with Drizzle ORM for type-safe operations
-- **Email Service**: SendGrid integration for contact form submissions
+- **Email Service**: Python-based SMTP email system using smtplib and EmailMessage
 - **Session Management**: Secure session handling with PostgreSQL storage
 - **Real-time Communication**: WebSocket support for future enhancements
 
@@ -45,9 +45,10 @@ This is a modern, interactive portfolio website showcasing Aryan Shah's professi
 - **Node.js**: JavaScript runtime for server-side logic
 - **Express.js**: Minimal web framework for API development
 - **TypeScript**: Type-safe server-side development
+- **Python 3.11**: Email processing with native SMTP libraries
 - **Drizzle ORM**: Modern TypeScript ORM for database operations
 - **PostgreSQL**: Robust relational database (Neon Database)
-- **SendGrid**: Professional email delivery service
+- **smtplib & EmailMessage**: Native Python email sending with Gmail SMTP
 - **Zod**: Runtime type validation and schema definition
 
 ### Development Tools
@@ -82,6 +83,13 @@ This is a modern, interactive portfolio website showcasing Aryan Shah's professi
 - **Migration Management**: Version-controlled database changes
 - **Connection Pooling**: Efficient database resource utilization
 
+### Email System Architecture
+- **Hybrid Approach**: Node.js backend spawns Python processes for email sending
+- **Native SMTP**: Direct Gmail SMTP connection using Python's built-in libraries
+- **HTML & Text**: Dual-format emails with professional styling and plain-text fallback
+- **Error Handling**: Comprehensive logging and fallback mechanisms
+- **App Password Security**: Gmail App Password authentication for enhanced security
+
 ### API Design
 - **RESTful Endpoints**: Standard HTTP methods and status codes
 - **Request Validation**: Zod schema validation for all inputs
@@ -101,7 +109,8 @@ This is a modern, interactive portfolio website showcasing Aryan Shah's professi
 │   ├── index.ts            # Server entry point
 │   ├── routes.ts           # API route definitions
 │   ├── storage.ts          # Database abstraction layer
-│   ├── email.ts            # Email service integration
+│   ├── email.ts            # Email service integration (Node.js)
+│   ├── email_sender.py     # Python SMTP email implementation
 │   └── vite.ts             # Development server integration
 ├── shared/                 # Shared type definitions
 │   └── schema.ts           # Database schemas and types
