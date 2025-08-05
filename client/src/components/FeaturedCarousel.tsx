@@ -47,7 +47,7 @@ export default function FeaturedCarousel() {
   return (
     <section id="featured" className="py-20">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 animate-slide-up">Featured Projects</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 animate-slide-up">Featured</h2>
         
         <div className="glass-effect rounded-3xl p-8 mb-12">
           <div className="carousel-container rounded-2xl overflow-hidden bg-gray-900/30">
