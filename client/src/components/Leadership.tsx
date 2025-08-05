@@ -12,7 +12,7 @@ const leadershipExperiences = [
     location: "Mumbai, India",
     type: "Leadership & Research",
     icon: <Users className="w-5 h-5" />,
-    description: "Led a team that researches on current affairs to create study guides for the large number of delegates that will take part in our events. Great way of gaining knowledge and be part of the organising committee of a large scale event.",
+    description: "Led a current affairs research team to create study guides for the large number of delegates that take part in our events. Gained valuable experience as part of the organizing committee of a large scale event.",
     achievements: [
       "Led a 15-member research team to create comprehensive study guides covering 8+ international crisis scenarios for MUN delegates",
       "Coordinated with organizing committee to successfully execute large-scale international MUN conferences with 300+ participants from across India",
@@ -30,7 +30,7 @@ const leadershipExperiences = [
     location: "Mumbai, India",
     type: "Business Development",
     icon: <Target className="w-5 h-5" />,
-    description: "Worked as an Executive for the Business development and marketing department. Used self created databases to pitch to various companies, start ups, businesses, etc. to sponsor our events in cash or in kind in return for publicity and exposure deliverables that we offered them.",
+    description: "Worked as an Executive for the Business development and marketing department. Used self made databases to pitch to various companies, start ups, businesses, etc. to sponsor our events in cash or in kind in return for publicity and exposure deliverables that were offered to them.",
     achievements: [
       "Created and maintained comprehensive CRM databases with potential sponsors, increasing outreach efficiency",
       "Successfully secured sponsorships worth ₹1L+ from 20+ companies, startups, and businesses through strategic pitching",
@@ -48,7 +48,7 @@ const leadershipExperiences = [
     location: "Mumbai, India",
     type: "Social Services",
     icon: <Heart className="w-5 h-5" />,
-    description: "Part of a team of driven people who work tirelessly for the cause 'Act for Impact' and aim to give something back to the society through various events such as donation drives, letter distributions and much more.",
+    description: "Part of a group of driven people who work tirelessly for the cause 'Act for Impact' and aimed to give something back to the society through various events such as donation drives, letter distributions and much more.",
     achievements: [
       "Spearheaded community service initiatives under 'Act for Impact' mission, directly benefiting individuals from underprivileged communities",
       "Organized and executed large-scale donation drives collecting  essentials including food, clothing, and educational materials",
@@ -64,7 +64,7 @@ const leadershipExperiences = [
     location: "Mumbai, India",
     type: "Arts & Marketing",
     icon: <Award className="w-5 h-5" />,
-    description: "Responsible for raising funds for musical events. Performing in a band as a vocalist taking part in inter college fests and intra college events.",
+    description: "Worked in a team responsible for raising funds for musical events. Performing in a band as a vocalist taking part in inter college fests and intra college events.",
     achievements: [
       "Successfully raised funds through strategic fundraising campaigns for musical events and performances",
       "Performed as lead vocalist in college band, participating inter-college and intra-college festivals with consistent top-3 placements and 3 wins",
@@ -79,7 +79,7 @@ const leadershipExperiences = [
     location: "Mumbai, India",
     type: "Arts & Culture",
     icon: <Users className="w-5 h-5" />,
-    description: "Part of a team that accumulated and hosted talent from all over the country to perform at our college's cultural festival Sattva.",
+    description: "Worked in a team that accumulated and hosted talent from all over the country to perform at our college's cultural festival Sattva.",
     achievements: [
       "Curated and coordinated 50+ talented performers from states across India for Sattva 2021, one of Mumbai's premier college cultural festivals",
       "Managed complex logistics including travel, accommodation, and technical requirements for artists over 3-day festival period",
