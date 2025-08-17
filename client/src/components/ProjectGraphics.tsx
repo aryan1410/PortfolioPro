@@ -209,6 +209,55 @@ export const MLGraphic = () => (
   </svg>
 );
 
+export const WorkflowGraphic = () => (
+  <svg viewBox="0 0 200 200" className="w-full h-full">
+    {/* Background */}
+    <rect width="200" height="200" fill="url(#workflowGradient)" rx="8"/>
+    <defs>
+      <linearGradient id="workflowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#1f2937"/>
+        <stop offset="100%" stopColor="#4f46e5"/>
+      </linearGradient>
+    </defs>
+    
+    {/* Project Cards */}
+    <rect x="20" y="30" width="60" height="40" fill="#3b82f6" rx="4" opacity="0.8"/>
+    <rect x="90" y="30" width="60" height="40" fill="#10b981" rx="4" opacity="0.8"/>
+    <rect x="160" y="30" width="20" height="40" fill="#f59e0b" rx="4" opacity="0.8"/>
+    
+    {/* Task Lists */}
+    <rect x="25" y="35" width="50" height="4" fill="#ffffff" rx="2"/>
+    <rect x="25" y="42" width="35" height="4" fill="#e5e7eb" rx="2"/>
+    <rect x="25" y="49" width="40" height="4" fill="#e5e7eb" rx="2"/>
+    <rect x="25" y="56" width="25" height="4" fill="#e5e7eb" rx="2"/>
+    
+    <rect x="95" y="35" width="45" height="4" fill="#ffffff" rx="2"/>
+    <rect x="95" y="42" width="30" height="4" fill="#e5e7eb" rx="2"/>
+    <rect x="95" y="49" width="35" height="4" fill="#e5e7eb" rx="2"/>
+    
+    {/* Timer/Analytics */}
+    <circle cx="100" cy="120" r="35" fill="rgba(59, 130, 246, 0.2)" stroke="#3b82f6" strokeWidth="3"/>
+    <text x="100" y="115" textAnchor="middle" fill="#3b82f6" fontSize="12" fontWeight="bold">2:45</text>
+    <text x="100" y="130" textAnchor="middle" fill="#3b82f6" fontSize="8">TIMER</text>
+    
+    {/* Progress bars */}
+    <rect x="30" y="160" width="140" height="8" fill="#374151" rx="4"/>
+    <rect x="30" y="160" width="84" height="8" fill="#10b981" rx="4"/>
+    <text x="100" y="153" textAnchor="middle" fill="#10b981" fontSize="10">60% Complete</text>
+    
+    {/* Collaboration icons */}
+    <circle cx="40" cy="185" r="8" fill="#8b5cf6"/>
+    <circle cx="60" cy="185" r="8" fill="#06b6d4"/>
+    <circle cx="80" cy="185" r="8" fill="#f59e0b"/>
+    <text x="100" y="190" fill="#9ca3af" fontSize="8">Team</text>
+    
+    {/* File icons */}
+    <rect x="150" y="170" width="12" height="15" fill="#ef4444" rx="2"/>
+    <rect x="165" y="170" width="12" height="15" fill="#3b82f6" rx="2"/>
+    <text x="165" y="165" textAnchor="middle" fill="#9ca3af" fontSize="8">Files</text>
+  </svg>
+);
+
 export const DatabaseGraphic = () => (
   <svg viewBox="0 0 200 200" className="w-full h-full">
     {/* Background */}

@@ -6,7 +6,8 @@ import {
   NLPGraphic, 
   WebDevGraphic, 
   MLGraphic, 
-  DatabaseGraphic 
+  DatabaseGraphic,
+  WorkflowGraphic 
 } from "./ProjectGraphics";
 
 // Import local assets
@@ -16,6 +17,7 @@ import viterbiImage from "@assets/viterbi_1753848924872.png";
 import confusionImage from "@assets/confusion_1753848924852.png";
 import memoryImage from "@assets/memory_1753848924871.png";
 import pedestrianImage from "@assets/pedestrian_1753848924872.png";
+import workflowImage from "@assets/image_1755404592052.png";
 
 export default function Projects() {
   const [expandedProject, setExpandedProject] = useState<number | null>(null);
@@ -107,6 +109,21 @@ export default function Projects() {
         "Improving clarity in online courses and videos"
       ],
       github: "https://github.com/aryan1410/confused_student_simulator"
+    },
+    {
+      title: "Workflow - Academic Project Tracker",
+      image: workflowImage,
+      graphic: <WorkflowGraphic />,
+      description: "A comprehensive Flask and PostgreSQL web app that helps students organize projects, manage tasks, collaborate on group work, and track study productivity. Built with Python, SQLAlchemy, Jinja2, Bootstrap 5, and Chart.js, it features role-based permissions, secure file uploads, study timers, progress analytics, and full-text search, all deployed with Docker, Gunicorn, Fly.io, and Neon PostgreSQL.",
+      applications: [
+        "Academic project and course task management",
+        "Group collaboration with roles, comments, and file sharing",
+        "Study session tracking with timers and weekly analytics",
+        "Visual dashboards for deadlines, progress, and productivity",
+        "Smart full-text search across projects and tasks"
+      ],
+      github: "https://github.com/aryan1410/WorkFlow",
+      liveDemo: "https://workfloww.fly.dev"
     }
   ];
 
@@ -162,15 +179,28 @@ export default function Projects() {
                     </div>
                   </div>
                   
-                  <a 
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    View on GitHub →
-                  </a>
+                  <div className="flex gap-4">
+                    <a 
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      View on GitHub →
+                    </a>
+                    {(project as any).liveDemo && (
+                      <a 
+                        href={(project as any).liveDemo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-green-400 hover:text-green-300 text-sm font-medium"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        Live Demo →
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
               
@@ -183,15 +213,28 @@ export default function Projects() {
                       </span>
                     ))}
                   </div>
-                  <a 
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    GitHub →
-                  </a>
+                  <div className="flex gap-2">
+                    <a 
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      GitHub →
+                    </a>
+                    {(project as any).liveDemo && (
+                      <a 
+                        href={(project as any).liveDemo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-green-400 hover:text-green-300 text-sm"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        Demo →
+                      </a>
+                    )}
+                  </div>
                 </div>
               )}
             </div>
