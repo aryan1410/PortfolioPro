@@ -37,6 +37,15 @@ export default function Projects() {
         "Decision-making simulations",
         "Educational tools for AI in games"
       ],
+      skillsGained: [
+        "Reinforcement Learning",
+        "Minimax Algorithm",
+        "Alpha-Beta Pruning",
+        "Game Theory",
+        "Python Programming",
+        "Neural Networks",
+        "Self-Play Training"
+      ],
       github: "https://github.com/aryan1410/little_go"
     },
     {
@@ -50,6 +59,15 @@ export default function Projects() {
         "Mood-based playlist generators", 
         "Interactive entertainment systems",
         "Real-time adaptive media environments"
+      ],
+      skillsGained: [
+        "Computer Vision",
+        "Convolutional Neural Networks",
+        "VGG19 Architecture",
+        "OpenCV",
+        "Real-time Processing",
+        "Facial Recognition",
+        "TensorFlow/Keras"
       ],
       github: "https://github.com/aryan1410/emotion_recognition"
     },
@@ -65,6 +83,15 @@ export default function Projects() {
         "Medical diagnosis with hidden symptoms", 
         "Predictive analytics in dynamic systems"
       ],
+      skillsGained: [
+        "Viterbi Algorithm",
+        "Hidden Markov Models",
+        "Temporal Reasoning",
+        "Probability Theory",
+        "Dynamic Programming",
+        "State Estimation",
+        "Bayesian Inference"
+      ],
       github: "https://github.com/aryan1410/viterbi_temporal_reasoning"
     },
     {
@@ -79,6 +106,15 @@ export default function Projects() {
         "Bioinformatics algorithm optimization",
         "Protein or RNA structure alignment"
       ],
+      skillsGained: [
+        "Dynamic Programming",
+        "Space-Time Optimization",
+        "Algorithm Analysis",
+        "Bioinformatics",
+        "Memory Management",
+        "Recursive Problem Solving",
+        "Computational Biology"
+      ],
       github: "https://github.com/aryan1410/sequence_alignment_efficiency_analysis"
     },
     {
@@ -92,6 +128,15 @@ export default function Projects() {
         "Smart city pedestrian monitoring",
         "Safety alert systems in transport and construction zones",
         "Crowd analytics and behavior analysis"
+      ],
+      skillsGained: [
+        "Deep Learning",
+        "Transfer Learning",
+        "VGG19, ResNet101, InceptionV3",
+        "Computer Vision",
+        "Object Detection",
+        "Video Processing",
+        "Model Evaluation"
       ],
       github: "https://github.com/aryan1410/pedestrian_detection"
     },
@@ -108,6 +153,15 @@ export default function Projects() {
         "Research on AI-simulated learning behavior",
         "Improving clarity in online courses and videos"
       ],
+      skillsGained: [
+        "Natural Language Processing",
+        "Large Language Models",
+        "Automatic Speech Recognition",
+        "Conversational AI",
+        "Text Processing",
+        "API Integration",
+        "Educational Technology"
+      ],
       github: "https://github.com/aryan1410/confused_student_simulator"
     },
     {
@@ -121,6 +175,17 @@ export default function Projects() {
         "Study session tracking with timers and weekly analytics",
         "Visual dashboards for deadlines, progress, and productivity",
         "Smart full-text search across projects and tasks"
+      ],
+      skillsGained: [
+        "Flask Web Development",
+        "PostgreSQL Database Design",
+        "SQLAlchemy ORM",
+        "Bootstrap 5 & Responsive Design",
+        "Chart.js Data Visualization",
+        "Docker Containerization",
+        "Fly.io Deployment",
+        "File Upload Security",
+        "Full-Text Search Implementation"
       ],
       github: "https://github.com/aryan1410/WorkFlow",
       liveDemo: "https://workfloww.fly.dev"
@@ -174,6 +239,17 @@ export default function Projects() {
                       {project.applications.map((app, appIndex) => (
                         <span key={appIndex} className="text-xs bg-blue-600 bg-opacity-50 px-2 py-1 rounded">
                           {app}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-sm font-semibold text-gray-300 mb-2">Skills Gained:</h4>
+                    <div className="flex flex-wrap gap-1">
+                      {(project as any).skillsGained?.map((skill: string, skillIndex: number) => (
+                        <span key={skillIndex} className="text-xs bg-green-600 bg-opacity-50 px-2 py-1 rounded">
+                          {skill}
                         </span>
                       ))}
                     </div>
