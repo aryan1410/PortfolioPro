@@ -194,19 +194,19 @@ export default function Experience() {
                 <ul className="space-y-3 text-gray-300">
                   <li className="flex items-start space-x-3">
                     <Search className="text-blue-400 mt-1 flex-shrink-0" size={16} />
-                    <span>Forming a network through various databases of corporates in and out of India in the organic field via research.</span>
+                    <span>Formed a network of over 500 companies through various databases of corporates in and out of India in the organic field via research.</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <BarChart className="text-green-400 mt-1 flex-shrink-0" size={16} />
-                    <span>Analysis of the companies for business purposes and approaching them for features in the magazine on a regular basis.</span>
+                    <span>Analyzed companies for business purposes and approached them for features on a regular basis, closing over 25 features.</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <Users className="text-purple-400 mt-1 flex-shrink-0" size={16} />
-                    <span>Research on highly active CSR firms in India to approach for webinars in order to spread awareness about organic products. Work collaboratively with rest of the team members.</span>
+                    <span>Researched on highly active CSR firms in India to approach for webinars in order to spread awareness about organic products working collaboratively.</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <TrendingUp className="text-orange-400 mt-1 flex-shrink-0" size={16} />
-                    <span>Pitching to various individuals or brands to bring in business and revenue for the company.</span>
+                    <span>Pitched to various individuals and brands to bring in business and revenue from over 8 sources for company.</span>
                   </li>
                 </ul>
               </div>
