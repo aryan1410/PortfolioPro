@@ -62,7 +62,6 @@ export default function Education() {
                   <h3 className="text-2xl font-bold">BTech in Data Science</h3>
                   <p className="text-xl text-gray-300">NMIMS Mukesh Patel School of Technology Management and Engineering</p>
                   <p className="text-gray-400">August 2020 - July 2024</p>
-                  <p className="text-blue-400 font-semibold">CGPA: 3.64</p>
                 </div>
               </div>
               <ChevronDown 
