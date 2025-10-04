@@ -158,7 +158,7 @@ export default function Experience() {
                   </li>
                   <li className="flex items-start space-x-3">
                     <Layout className="text-purple-400 mt-1 flex-shrink-0" size={16} />
-                    <span>Developed and deployed a consolidated dashboard on the Indian debt market in collaboration with equity analysts and compliance regulators, using Plotly for visualization and automated data scraping tools like BrowseAI to streamline data collection.</span>
+                    <span>Developed and deployed a consolidated dashboard on the Indian debt market in collaboration with equity analysts and compliance regulators, with insightful graph visualization and automated data scraping tools like BrowseAI to streamline data collection.</span>
                   </li>
                 </ul>
               </div>
