@@ -93,31 +93,39 @@ export default function Experience() {
                 <ul className="space-y-3 text-gray-300">
                   <li className="flex items-start space-x-3">
                     <Bot className="text-blue-400 mt-1 flex-shrink-0" size={16} />
-                    <span>Developed a chatbot core engine system prototype by using prompt engineering and leveraging OpenAI's LLM, resulting in efficient initial chatbot architecture, meeting business intelligence standards.</span>
+                    <span>Developed initial version of AI-powered investment chatbot interfaced by Meta, via prompt engineering, enabling 1 million people to invest in financial market.</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <Database className="text-green-400 mt-1 flex-shrink-0" size={16} />
-                    <span>Managed infrastructure of chatbot's cross-functional RAG database and userbase, operating MongoDB and SQL, deploying LLM pipelines and performing sentiment analysis and information retrieval on real-time messages to boost response quality.</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <Users className="text-purple-400 mt-1 flex-shrink-0" size={16} />
-                    <span>Contextualized user query by maintaining conversation summaries and entities for every user in dedicated user profiles, and feeding LLM incremental summaries and entities for a new message in a user session for over 100 message conversations.</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <TestTube className="text-orange-400 mt-1 flex-shrink-0" size={16} />
-                    <span>Implemented multi-threaded visual testing of chatbot API responses using Postman schematics for 150 scenarios, improving bug identification and resolution by over 100%.</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <TrendingUp className="text-yellow-400 mt-1 flex-shrink-0" size={16} />
-                    <span>Utilized LLM to optimize chat history summariser for a user session via prompt engineering and string slicing techniques, optimizing summary length by 35% and boosting user engagement by personalized context preservation.</span>
+                    <span>Designed and optimized hybrid RAG infrastructure, boosting response quality by 40% via context ingestion</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <BarChart className="text-cyan-400 mt-1 flex-shrink-0" size={16} />
-                    <span>Constructed a synthetic dataset of product specific user journeys (over 5000 user messages) for evaluation of minimum viable product, fine tuning and training of custom LLMs tailored to chatbot, and saving 20% overall cost from OpenAl's API calls.</span>
+                    <span>Enhanced token usage by optimizing user conversation summary window reducing outgoing tokens and LLM costs, while maintaining coherent, multi-turn dialogue.</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <TestTube className="text-orange-400 mt-1 flex-shrink-0" size={16} />
+                    <span>Implemented visual testing of chatbot APIs for custom generated scenarios, improving bug identification and resolution, establishing a primary test suite for new feature release</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <TrendingUp className="text-yellow-400 mt-1 flex-shrink-0" size={16} />
+                    <span>Constructed a synthetic dataset of user workflows for fine tuning and training of custom LLMs tailored to domain specific knowledge base, replacing a fraction of OpenAI calls, thereby reducing overall cost</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <Users className="text-purple-400 mt-1 flex-shrink-0" size={16} />
+                    <span>Developed a notifications microservice, ensuring reliable real-time delivery of time-sensitive alerts to over 10,000 users monthly and boosting system responsiveness</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <Bot className="text-blue-400 mt-1 flex-shrink-0" size={16} />
+                    <span>Developed a message broker in Python to streamline inter-service communication, improving message throughput across backend systems and enhancing overall reliability, fault tolerance, and scalability under heavy workloads.</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <BarChart className="text-cyan-400 mt-1 flex-shrink-0" size={16} />
+                    <span>Built a WebSocket-based real-time chat service, enabling seamless agent intervention during active user sessions and reducing average support response time, significantly improving user satisfaction and service efficiency</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <Layout className="text-red-400 mt-1 flex-shrink-0" size={16} />
-                    <span>Led development of an automated end-to-end integration testing framework, which served as a benchmark for product launch by querying journey specific data to chatbot's API, asserting response latency, fluency, accuracy, and relevance metrics with ground truth response over threshold, and recording failure reports to AWS S3</span>
+                    <span>Led development of scalable and automated unit testing framework that validated chatbot API and database responses against ground truth, using deterministic equality checks or metric-based thresholds for non-deterministic LLM outputs, with failure reports stored in AWS S3, that served as troubleshooting benchmark for feature development in go to market phase</span>
                   </li>
                 </ul>
               </div>
@@ -150,15 +158,15 @@ export default function Experience() {
                 <ul className="space-y-3 text-gray-300">
                   <li className="flex items-start space-x-3">
                     <BarChart className="text-blue-400 mt-1 flex-shrink-0" size={16} />
-                    <span>Led research to scrape over 10 years of bond yield data from CBIL Bond Index and RBI website, pre-processed and cleaned it using data wrangling and mining techniques, and condensed data frequencies to monthly aggregates, accommodating broader timelines for data analysis and improving efficiency.</span>
+                    <span>Led project to scrape over 10 years of financial bond data, converted high frequency data to monthly aggregates, utilizing data pre-processing, cleaning, and wrangling techniques in PySpark, to accommodate broader timelines for data analysis and clustering.</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <Search className="text-green-400 mt-1 flex-shrink-0" size={16} />
-                    <span>Performed quantitative exploratory data analysis to visualize and plot yield movements and its relationship with various independent variables such as benchmark index rates, inflation rates, etc. with rapid experimentation and statistics fundamentals.</span>
+                    <span>Performed quantitative data analysis and CUDA boosted panel regression to visualize yield movements and their relationship with independent variables benchmark index rates and inflation, leading to predictive models that increased trading revenue.</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <Layout className="text-purple-400 mt-1 flex-shrink-0" size={16} />
-                    <span>Developed and deployed a consolidated dashboard on the Indian debt market in collaboration with equity analysts and compliance regulators, with insightful graph visualization and automated data scraping tools like BrowseAI to streamline data collection.</span>
+                    <span>Developed and deployed a dashboard application, for the Indian debt market, with insightful data visualizations and AI automated data scraping and storage, supporting regular equity analyst research and vetted by compliance regulators.</span>
                   </li>
                 </ul>
               </div>
