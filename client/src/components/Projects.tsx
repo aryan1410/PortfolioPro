@@ -7,7 +7,8 @@ import {
   WebDevGraphic, 
   MLGraphic, 
   DatabaseGraphic,
-  WorkflowGraphic 
+  WorkflowGraphic,
+  DGenGraphic
 } from "./ProjectGraphics";
 
 // Import local assets
@@ -18,6 +19,7 @@ import confusionImage from "@assets/confusion_1753848924852.png";
 import memoryImage from "@assets/memory_1753848924871.png";
 import pedestrianImage from "@assets/pedestrian_1753848924872.png";
 import workflowImage from "@assets/image_1755404592052.png";
+import dgenImage from "@assets/dgen.png";
 
 export default function Projects() {
   const [expandedProject, setExpandedProject] = useState<number | null>(null);
@@ -189,6 +191,32 @@ export default function Projects() {
       ],
       github: "https://github.com/aryan1410/WorkFlow",
       liveDemo: "https://workfloww.fly.dev"
+    },
+    {
+      title: "D-GEN – AI-Powered Personalized Learning Platform",
+      image: dgenImage,
+      graphic: <DGenGraphic />,
+      description: "A full-stack React, Node.js, and Supabase web app that transforms traditional textbooks into engaging, personalized conversational lessons using Google Gemini AI. The platform delivers adaptive teaching personas, interactive quizzes, and real-time progress tracking — creating a dynamic, gamified learning experience for students. Built with TypeScript, PostgreSQL, TailwindCSS, and Edge Functions, it features secure authentication, textbook uploads, AI-generated visuals, and analytics dashboards. Deployed with Vite, Supabase Cloud, and Deno Edge, D-GEN was recognized as a hackathon finalist for innovation in AI-driven education.",
+      applications: [
+        "Personalized tutoring through AI personas (Gen-Z, Classic, and Adaptive modes)",
+        "Interactive textbook-to-chat learning with contextual grounding",
+        "AI-generated quizzes and feedback-driven improvement loop",
+        "Gamified dashboards with leaderboards, progress charts, and friend tracking",
+        "Secure authentication, profile management, and file-based textbook uploads"
+      ],
+      skillsGained: [
+        "React & TypeScript Frontend Engineering",
+        "Node.js + Express API Development",
+        "Supabase & PostgreSQL Backend Design",
+        "Serverless Edge Functions (Deno)",
+        "AI Integration with Google Gemini API",
+        "Real-Time Data Visualization (Recharts, shadcn/ui)",
+        "TailwindCSS & Responsive UI Design",
+        "Secure Authentication & RLS Policies",
+        "Cloud Deployment on Supabase & Vite"
+      ],
+      github: "https://github.com/aryan1410/persona-tutor-learn",
+      liveDemo: "https://d-gen.lovable.app/"
     }
   ];
 

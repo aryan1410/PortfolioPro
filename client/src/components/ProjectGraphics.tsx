@@ -298,3 +298,77 @@ export const DatabaseGraphic = () => (
     </defs>
   </svg>
 );
+
+export const DGenGraphic = () => (
+  <svg viewBox="0 0 200 200" className="w-full h-full">
+    {/* Background */}
+    <rect width="200" height="200" fill="url(#aiGradient)" rx="8" />
+    <defs>
+      <linearGradient id="aiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#0f172a" />
+        <stop offset="100%" stopColor="#1e293b" />
+      </linearGradient>
+    </defs>
+
+    {/* AI head */}
+    <g opacity="0.95">
+      <circle cx="100" cy="70" r="28" fill="#475569" stroke="#38bdf8" strokeWidth="2" />
+      <rect x="72" y="98" width="56" height="35" rx="10" fill="#475569" />
+      <circle cx="88" cy="65" r="5" fill="#38bdf8" />
+      <circle cx="112" cy="65" r="5" fill="#38bdf8" />
+      <rect x="90" y="78" width="20" height="4" rx="2" fill="#67e8f9" opacity="0.8" />
+    </g>
+
+    {/* Speech bubbles */}
+    <g className="animate-pulse" opacity="0.85">
+      <rect x="25" y="35" width="55" height="20" rx="5" fill="rgba(6, 182, 212, 0.2)" />
+      <text x="52" y="49" textAnchor="middle" fill="#67e8f9" fontSize="8">"Explain photosynthesis"</text>
+
+      <rect x="120" y="120" width="55" height="20" rx="5" fill="rgba(6, 182, 212, 0.2)" />
+      <text x="147" y="134" textAnchor="middle" fill="#67e8f9" fontSize="8">"Sure! Let's visualize it."</text>
+    </g>
+
+    {/* AI–Book connection lines */}
+    <path
+      d="M60 60 Q100 90 140 120"
+      stroke="#06b6d4"
+      strokeWidth="2"
+      fill="none"
+      markerEnd="url(#arrowhead)"
+    />
+    <path
+      d="M140 80 Q100 110 60 140"
+      stroke="#06b6d4"
+      strokeWidth="2"
+      fill="none"
+      opacity="0.7"
+    />
+
+    {/* Book icons */}
+    <g opacity="0.9">
+      <rect x="40" y="140" width="35" height="25" rx="3" fill="#475569" />
+      <line x1="55" y1="140" x2="55" y2="165" stroke="#94a3b8" strokeWidth="1.5" />
+      <rect x="125" y="30" width="35" height="25" rx="3" fill="#475569" />
+      <line x1="140" y1="30" x2="140" y2="55" stroke="#94a3b8" strokeWidth="1.5" />
+    </g>
+
+    {/* Caption */}
+    <text
+      x="100"
+      y="185"
+      textAnchor="middle"
+      fill="#67e8f9"
+      fontSize="10"
+      opacity="0.9"
+    >
+      D-GEN · AI Tutor for Engaging Learning
+    </text>
+
+    {/* Arrow marker */}
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4" />
+      </marker>
+    </defs>
+  </svg>
+);
