@@ -372,3 +372,146 @@ export const DGenGraphic = () => (
     </defs>
   </svg>
 );
+
+export const ResearchAgentGraphic = () => (
+  <svg viewBox="0 0 200 200" className="w-full h-full">
+    {/* Background */}
+    <rect width="200" height="200" fill="url(#researchGradient)" rx="8" />
+    <defs>
+      <linearGradient id="researchGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#020617" />
+        <stop offset="100%" stopColor="#111827" />
+      </linearGradient>
+
+      <radialGradient id="scanGlow" cx="50%" cy="40%" r="45%">
+        <stop offset="0%" stopColor="#22d3ee" stopOpacity="0.45" />
+        <stop offset="100%" stopColor="#22d3ee" stopOpacity="0" />
+      </radialGradient>
+
+      <marker id="raArrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee" />
+      </marker>
+    </defs>
+
+    {/* Scan glow */}
+    <circle cx="100" cy="75" r="55" fill="url(#scanGlow)" />
+
+    {/* Research core node */}
+    <g opacity="0.95">
+      <circle cx="100" cy="80" r="26" fill="#020617" stroke="#38bdf8" strokeWidth="2" />
+      {/* inner radar rings */}
+      <circle cx="100" cy="80" r="18" fill="none" stroke="#0ea5e9" strokeWidth="1" opacity="0.5" />
+      <circle cx="100" cy="80" r="10" fill="none" stroke="#0ea5e9" strokeWidth="0.7" opacity="0.6" />
+      {/* scanning line */}
+      <path
+        d="M100 80 L125 70"
+        stroke="#67e8f9"
+        strokeWidth="2"
+        strokeLinecap="round"
+        opacity="0.9"
+      />
+      {/* small nodes around core */}
+      <circle cx="80" cy="70" r="3" fill="#22d3ee" />
+      <circle cx="118" cy="68" r="3" fill="#22d3ee" />
+      <circle cx="90" cy="95" r="3" fill="#22d3ee" />
+      <circle cx="112" cy="96" r="3" fill="#22d3ee" />
+    </g>
+
+    {/* Connection lines to documents */}
+    <path
+      d="M100 90 Q55 110 40 135"
+      stroke="#22d3ee"
+      strokeWidth="1.8"
+      fill="none"
+      markerEnd="url(#raArrowhead)"
+    />
+    <path
+      d="M100 90 Q145 110 160 135"
+      stroke="#22d3ee"
+      strokeWidth="1.8"
+      fill="none"
+      markerEnd="url(#raArrowhead)"
+      opacity="0.9"
+    />
+    <path
+      d="M100 70 Q50 55 35 45"
+      stroke="#22d3ee"
+      strokeWidth="1.2"
+      fill="none"
+      opacity="0.5"
+    />
+    <path
+      d="M100 70 Q150 55 165 40"
+      stroke="#22d3ee"
+      strokeWidth="1.2"
+      fill="none"
+      opacity="0.5"
+    />
+
+    {/* Left document card */}
+    <g opacity="0.95">
+      <rect x="28" y="125" width="50" height="30" rx="4" fill="#020617" stroke="#334155" strokeWidth="1" />
+      <rect x="32" y="131" width="30" height="4" rx="2" fill="#38bdf8" opacity="0.8" />
+      <rect x="32" y="139" width="36" height="3" rx="1.5" fill="#64748b" />
+      <rect x="32" y="145" width="26" height="3" rx="1.5" fill="#475569" />
+      {/* citation tags */}
+      <rect x="59" y="148" width="14" height="6" rx="2" fill="#0f172a" />
+      <text x="66" y="153" textAnchor="middle" fill="#e5e7eb" fontSize="6">[1]</text>
+    </g>
+
+    {/* Right document card */}
+    <g opacity="0.95">
+      <rect x="122" y="125" width="50" height="30" rx="4" fill="#020617" stroke="#334155" strokeWidth="1" />
+      <rect x="126" y="131" width="26" height="4" rx="2" fill="#38bdf8" opacity="0.8" />
+      <rect x="126" y="139" width="34" height="3" rx="1.5" fill="#64748b" />
+      <rect x="126" y="145" width="20" height="3" rx="1.5" fill="#475569" />
+      {/* citation tags */}
+      <rect x="152" y="148" width="14" height="6" rx="2" fill="#0f172a" />
+      <text x="159" y="153" textAnchor="middle" fill="#e5e7eb" fontSize="6">[2]</text>
+    </g>
+
+    {/* Magnifying glass (search icon) */}
+    <g opacity="0.9">
+      <circle cx="48" cy="48" r="10" fill="none" stroke="#22d3ee" strokeWidth="1.8" />
+      <line x1="54" y1="54" x2="60" y2="60" stroke="#22d3ee" strokeWidth="1.8" strokeLinecap="round" />
+      <circle cx="48" cy="48" r="4" fill="#0f172a" />
+    </g>
+
+    {/* Browser window (research UI) */}
+    <g opacity="0.9">
+      <rect x="120" y="30" width="50" height="32" rx="4" fill="#020617" stroke="#334155" strokeWidth="1" />
+      <rect x="124" y="34" width="42" height="6" rx="3" fill="#0f172a" />
+      <circle cx="129" cy="37" r="1.5" fill="#f97316" />
+      <circle cx="135" cy="37" r="1.5" fill="#eab308" />
+      <circle cx="141" cy="37" r="1.5" fill="#22c55e" />
+      <rect x="126" y="43" width="38" height="4" rx="2" fill="#1f2937" />
+      <rect x="126" y="50" width="24" height="3" rx="1.5" fill="#38bdf8" opacity="0.8" />
+      <rect x="126" y="56" width="30" height="3" rx="1.5" fill="#475569" />
+    </g>
+
+    {/* Query / response bubbles */}
+    <g className="animate-pulse" opacity="0.85">
+      <rect x="20" y="80" width="70" height="18" rx="6" fill="rgba(8, 145, 178, 0.18)" />
+      <text x="55" y="92" textAnchor="middle" fill="#67e8f9" fontSize="7">
+        "Deep-dive on AI policy"
+      </text>
+
+      <rect x="110" y="95" width="70" height="18" rx="6" fill="rgba(8, 145, 178, 0.18)" />
+      <text x="145" y="107" textAnchor="middle" fill="#67e8f9" fontSize="7">
+        "Synthesizing sources and citations..."
+      </text>
+    </g>
+
+    {/* Caption */}
+    <text
+      x="100"
+      y="186"
+      textAnchor="middle"
+      fill="#67e8f9"
+      fontSize="10"
+      opacity="0.95"
+    >
+      DEEP RESEARCH · AI Research Agent
+    </text>
+  </svg>
+);

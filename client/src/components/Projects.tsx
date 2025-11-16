@@ -8,7 +8,8 @@ import {
   MLGraphic, 
   DatabaseGraphic,
   WorkflowGraphic,
-  DGenGraphic
+  DGenGraphic,
+  ResearchAgentGraphic
 } from "./ProjectGraphics";
 
 // Import local assets
@@ -20,6 +21,7 @@ import memoryImage from "@assets/memory_1753848924871.png";
 import pedestrianImage from "@assets/pedestrian_1753848924872.png";
 import workflowImage from "@assets/image_1755404592052.png";
 import dgenImage from "@assets/dgen.png";
+import deepResearcherImage from "@assets/research-agent.png";
 
 export default function Projects() {
   const [expandedProject, setExpandedProject] = useState<number | null>(null);
@@ -217,6 +219,33 @@ export default function Projects() {
       ],
       github: "https://github.com/aryan1410/persona-tutor-learn",
       liveDemo: "https://d-gen.lovable.app/"
+    },
+    {
+      title: "Deep Researcher - AI Research Agent",
+      image: deepResearcherImage,
+      graphic: <ResearchAgentGraphic />,
+      description: "A comprehensive full-stack AI research assistant built with Python, LangGraph, FastAPI, and Next.js that automates deep investigative research, synthesizes multi-source findings, and produces structured, citation-backed reports. Powered by OpenAI and Gemini LLMs, the system uses a competitive multi-agent workflow, dual search engines, and real-time streaming to deliver accurate and verifiable insights. Features include stateful agent orchestration, hybrid chat and research modes, streaming outputs, automatic result evaluation, and production-grade deployment with Docker and Render.",
+      applications: [
+        "Automated deep-research generation with multi-engine search",
+        "Hybrid chat and research workflow with persistent context",
+        "Competitive report generation using LLM-based evaluation",
+        "Real-time streaming output for long-running research tasks",
+        "Structured reports with summaries, tables, insights, and citations",
+        "Verified web research using Tavily and SerpAPI",
+        "Multi-model support with both OpenAI and Gemini"
+      ],
+      skillsGained: [
+        "LangGraph state machine design for orchestrated AI agents",
+        "Multi-model LLM tooling and integration",
+        "Distributed search architecture and API integration",
+        "FastAPI backend development and streaming responses",
+        "Next.js frontend with real-time data pipelines",
+        "Docker-based full-stack deployment",
+        "Production-grade error handling and SSE streaming",
+        "Prompt engineering for research, synthesis, and evaluation agents"
+      ],
+      github: "https://github.com/aryan1410/deep-researcher",
+      liveDemo: "https://deep-research-33lv.onrender.com/"
     }
   ];
 
