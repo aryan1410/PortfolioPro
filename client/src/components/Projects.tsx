@@ -29,6 +29,7 @@ export default function Projects() {
   const toggleProject = (index: number) => {
     setExpandedProject(expandedProject === index ? null : index);
   };
+
   const projects = [
     {
       title: "Little Go AI Agents",
@@ -254,70 +255,101 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12">Projects</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Vertical layout with one project per row */}
+        <div className="space-y-6">
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="glass-effect rounded-3xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer"
-              onClick={() => toggleProject(index)}
+              className="glass-effect rounded-3xl overflow-hidden hover:scale-[1.02] transition-all duration-300"
             >
-              {/* Split Image and Graphic Container */}
-              <div className="mb-4 h-48 flex gap-2">
-                {/* Main Project Image */}
-                <div className="w-2/3 h-full">
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
-                    className="w-full h-full object-cover rounded-xl"
-                  />
-                </div>
-                {/* Custom Interactive Graphic */}
-                <div className="w-1/3 h-full bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-2 border border-gray-600">
-                  {project.graphic}
+              {/* Main project card - always visible */}
+              <div 
+                className="p-6 cursor-pointer"
+                onClick={() => toggleProject(index)}
+              >
+                <div className="flex flex-col md:flex-row gap-6 items-start">
+                  {/* Image Section - 40% width on desktop */}
+                  <div className="w-full md:w-2/5 flex-shrink-0">
+                    <img 
+                      src={project.image} 
+                      alt={project.title} 
+                      className="w-full h-48 md:h-56 object-cover rounded-xl"
+                    />
+                  </div>
+                  
+                  {/* Content Section - 60% width on desktop */}
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-start justify-between gap-4 mb-3">
+                      <h3 className="text-2xl font-bold flex-1">{project.title}</h3>
+                      <div className="flex items-center gap-3 flex-shrink-0">
+                        {/* Graphic - smaller size */}
+                        <div className="w-16 h-16 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg p-2 border border-gray-600">
+                          {project.graphic}
+                        </div>
+                        {/* Chevron indicator */}
+                        <ChevronDown 
+                          className={`transition-transform duration-300 flex-shrink-0 ${expandedProject === index ? 'rotate-180' : ''}`}
+                          size={24}
+                        />
+                      </div>
+                    </div>
+                    
+                    {/* Description - always visible but line-clamped when collapsed */}
+                    <p className={`text-gray-400 text-sm mb-4 ${expandedProject === index ? '' : 'line-clamp-2'}`}>
+                      {project.description}
+                    </p>
+                    
+                    {/* Preview tags when collapsed */}
+                    {expandedProject !== index && (
+                      <div className="flex flex-wrap gap-2 items-center">
+                        {project.applications.slice(0, 3).map((app, appIndex) => (
+                          <span key={appIndex} className="text-xs bg-blue-600 bg-opacity-50 px-2 py-1 rounded">
+                            {app}
+                          </span>
+                        ))}
+                        {project.applications.length > 3 && (
+                          <span className="text-xs text-gray-400">+{project.applications.length - 3} more</span>
+                        )}
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
-              <div className="flex items-center justify-between mb-2">
-                <h3 className="text-xl font-bold">{project.title}</h3>
-                <ChevronDown 
-                  className={`transition-transform duration-300 ${expandedProject === index ? 'rotate-180' : ''}`}
-                  size={20}
-                />
-              </div>
               
-              <p className={`text-gray-400 text-sm mb-4 ${expandedProject === index ? '' : 'line-clamp-3'}`}>
-                {project.description}
-              </p>
-              
+              {/* Expandable detailed section */}
               <div className={`expandable-section ${expandedProject === index ? 'expanded' : ''}`}>
-                <div className="space-y-4">
+                <div className="px-6 pb-6 space-y-6">
+                  {/* All Applications */}
                   <div>
-                    <h4 className="text-sm font-semibold text-gray-300 mb-2">All Applications:</h4>
-                    <div className="flex flex-wrap gap-1">
+                    <h4 className="text-sm font-semibold text-gray-300 mb-3">All Applications:</h4>
+                    <div className="flex flex-wrap gap-2">
                       {project.applications.map((app, appIndex) => (
-                        <span key={appIndex} className="text-xs bg-blue-600 bg-opacity-50 px-2 py-1 rounded">
+                        <span key={appIndex} className="text-xs bg-blue-600 bg-opacity-50 px-3 py-1.5 rounded">
                           {app}
                         </span>
                       ))}
                     </div>
                   </div>
                   
+                  {/* Skills Gained */}
                   <div>
-                    <h4 className="text-sm font-semibold text-gray-300 mb-2">Skills Gained:</h4>
-                    <div className="flex flex-wrap gap-1">
+                    <h4 className="text-sm font-semibold text-gray-300 mb-3">Skills Gained:</h4>
+                    <div className="flex flex-wrap gap-2">
                       {(project as any).skillsGained?.map((skill: string, skillIndex: number) => (
-                        <span key={skillIndex} className="text-xs bg-green-600 bg-opacity-50 px-2 py-1 rounded">
+                        <span key={skillIndex} className="text-xs bg-green-600 bg-opacity-50 px-3 py-1.5 rounded">
                           {skill}
                         </span>
                       ))}
                     </div>
                   </div>
                   
-                  <div className="flex gap-4">
+                  {/* Links */}
+                  <div className="flex gap-4 pt-2">
                     <a 
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium"
+                      className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors"
                       onClick={(e) => e.stopPropagation()}
                     >
                       View on GitHub →
@@ -327,7 +359,7 @@ export default function Projects() {
                         href={(project as any).liveDemo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-green-400 hover:text-green-300 text-sm font-medium"
+                        className="inline-flex items-center text-green-400 hover:text-green-300 text-sm font-medium transition-colors"
                         onClick={(e) => e.stopPropagation()}
                       >
                         Live Demo →
@@ -336,40 +368,6 @@ export default function Projects() {
                   </div>
                 </div>
               </div>
-              
-              {expandedProject !== index && (
-                <div className="flex justify-between items-center">
-                  <div className="flex flex-wrap gap-1">
-                    {project.applications.slice(0, 2).map((app, appIndex) => (
-                      <span key={appIndex} className="text-xs bg-blue-600 bg-opacity-50 px-2 py-1 rounded">
-                        {app}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="flex gap-2">
-                    <a 
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      GitHub →
-                    </a>
-                    {(project as any).liveDemo && (
-                      <a 
-                        href={(project as any).liveDemo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center text-green-400 hover:text-green-300 text-sm"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        Demo →
-                      </a>
-                    )}
-                  </div>
-                </div>
-              )}
             </div>
           ))}
         </div>
