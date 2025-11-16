@@ -8,9 +8,19 @@ import memoryImage from "@assets/memory_1753848924871.png";
 import elixirImage from "@assets/elixir_1753848924870.png";
 import uscViterbiImage from "@assets/USC-viterbi_1753848924872.png";
 import workflowImage from "@assets/image_1755404592052.png"
+import dgenImage from "@assets/dgen.png";
+import deepResearcherImage from "@assets/research-agent.png";
 
 export default function FeaturedCarousel() {
   const projects = [
+    {
+      title: "AI Research Agent",
+      image: deepResearcherImage
+    },
+    {
+      title: "Adaptive AI Tutor",
+      image: dgenImage
+    },
     {
       title: "Game Playing Agents", 
       image: littleGoImage
