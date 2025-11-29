@@ -202,19 +202,15 @@ export default function Experience() {
                 <ul className="space-y-3 text-gray-300">
                   <li className="flex items-start space-x-3">
                     <Search className="text-blue-400 mt-1 flex-shrink-0" size={16} />
-                    <span>Formed a network of over 500 companies through various databases of corporates in and out of India in the organic field via research.</span>
+                    <span>Built scalable ETL workflows using Python (Pandas), SQL, and Kafka to collect, clean, and standardize datasets on over 500 global organic-sector companies, improving data quality, enhancing pipeline reliability, and reducing processing time by 35%. </span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <BarChart className="text-green-400 mt-1 flex-shrink-0" size={16} />
-                    <span>Analyzed companies for business purposes and approached them for features on a regular basis, closing over 25 features.</span>
+                    <span> Developed Tableau and Power BI dashboards to visualize outreach performance, CSR activity trends, and conversion pipelines, integrating automated refresh schedules and drill-down views that supported 25+ successful partnership features and improved reporting efficiency by 30%. </span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <Users className="text-purple-400 mt-1 flex-shrink-0" size={16} />
-                    <span>Researched on highly active CSR firms in India to approach for webinars in order to spread awareness about organic products working collaboratively.</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <TrendingUp className="text-orange-400 mt-1 flex-shrink-0" size={16} />
-                    <span>Pitched to various individuals and brands to bring in business and revenue from over 8 sources for company.</span>
+                    <span> Implemented data-driven lead scoring and segmentation models using Python, Excel automation, and advanced data-wrangling techniques, enabling targeted outreach, increasing qualified lead identification by 40%, and contributing to the expansion of 8 new revenue streams.</span>
                   </li>
                 </ul>
               </div>
