@@ -202,7 +202,7 @@ export default function Experience() {
                 <ul className="space-y-3 text-gray-300">
                   <li className="flex items-start space-x-3">
                     <Search className="text-blue-400 mt-1 flex-shrink-0" size={16} />
-                    <span>Built scalable ETL workflows using Python (Pandas), SQL, and Kafka to collect, clean, and standardize datasets on over 500 global organic-sector companies, improving data quality, enhancing pipeline reliability, and reducing processing time by 35%. </span>
+                    <span>Built scalable ETL workflows to collect, clean, and standardize datasets on over 500 global organic-sector companies, improving data quality, enhancing pipeline reliability, and reducing processing time by 35%. </span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <BarChart className="text-green-400 mt-1 flex-shrink-0" size={16} />
