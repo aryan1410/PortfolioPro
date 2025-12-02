@@ -44,6 +44,8 @@ export default function Education() {
                   <div className="skill-tag bg-blue-600 px-4 py-2 rounded-lg">Analysis of Algorithms (CSCI 570)</div>
                   <div className="skill-tag bg-blue-600 px-4 py-2 rounded-lg">Foundations of Artificial Intelligence (CSCI 561)</div>
                   <div className="skill-tag bg-blue-600 px-4 py-2 rounded-lg">Web Technologies (CSCI 571)</div>
+                  <div className="skill-tag bg-blue-600 px-4 py-2 rounded-lg">Machine Learning for Data Science (DSCI 552)</div>
+                  <div className="skill-tag bg-blue-600 px-4 py-2 rounded-lg">Database Systems (CSCI 585)</div>
                 </div>
               </div>
             </div>
