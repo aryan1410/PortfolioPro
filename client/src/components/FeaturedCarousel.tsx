@@ -10,6 +10,7 @@ import uscViterbiImage from "@assets/USC-viterbi_1753848924872.png";
 import workflowImage from "@assets/image_1755404592052.png"
 import dgenImage from "@assets/dgen.png";
 import deepResearcherImage from "@assets/research-agent.png";
+import endevoImage from "@assets/endevo_digitallegacy_logo.png";
 
 export default function FeaturedCarousel() {
   const projects = [
@@ -48,6 +49,10 @@ export default function FeaturedCarousel() {
     {
       title: "Workflow Website",
       image: workflowImage
+    },
+    {
+      title: "SWE Intern @ ENDevo",
+      image: endevoImage
     },
     {
       title: "NLP Engineer @ Elixir",

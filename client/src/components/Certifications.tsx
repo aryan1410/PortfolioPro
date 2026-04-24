@@ -23,6 +23,16 @@ const certifications = [
     badgeColor: "bg-cyan-700",
     tags: ["Machine Learning", "Regression", "Python", "Scikit-learn"],
   },
+  {
+    title: "Exploratory Data Analysis for Machine Learning (Honors)",
+    issuer: "IBM",
+    platform: "Coursera",
+    credentialUrl: "https://www.coursera.org/account/accomplishments/certificate/LTUMMN68QAEW",
+    logo: <img src={ibmLogo} alt="IBM" className="w-12 h-auto object-contain" />,
+    accentColor: "from-blue-600/20 to-cyan-500/10",
+    badgeColor: "bg-cyan-700",
+    tags: ["Data Analysis", "Pandas", "Statistics", "Data Visualization"],
+  }
 ];
 
 export default function Certifications() {
@@ -32,13 +42,15 @@ export default function Certifications() {
         <h2 className="text-4xl font-bold text-center mb-12">Certifications</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {certifications.map((cert) => (
+          {certifications.map((cert, index) => {
+            const isLastOdd = certifications.length % 2 !== 0 && index === certifications.length - 1;
+            return (
             <a
               key={cert.title}
               href={cert.credentialUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="glass-effect rounded-3xl p-8 hover:scale-105 transition-all duration-300 group block"
+              className={`relative glass-effect rounded-3xl p-8 hover:scale-105 transition-all duration-300 group block${isLastOdd ? " md:col-span-2 md:w-1/2 md:mx-auto" : ""}`}
             >
               <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${cert.accentColor} opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none`} />
 
@@ -71,7 +83,8 @@ export default function Certifications() {
                 ))}
               </div>
             </a>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
