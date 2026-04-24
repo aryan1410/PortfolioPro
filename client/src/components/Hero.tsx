@@ -19,7 +19,7 @@ export default function Hero() {
             Aryan Shah
           </h1>
           <h2 className="text-xl md:text-2xl text-gray-300 mb-6">
-            Computer Science Grad Student @ USC | ex-NLP Engineer at Elixir Equities
+            Incoming AI/ML Intern @ Daiichi Sankyo | Computer Science Grad Student @ USC | ex-SWE Intern at ENDevo | ex-NLP Engineer at Elixir Equities 
           </h2>
           <p className="text-lg text-gray-400 max-w-4xl mx-auto mb-8 leading-relaxed">
             Hi, I am a data scientist deeply passionate about artificial intelligence, large language models, neural networks, data analysis and statistical models. 
