@@ -24,6 +24,7 @@ export default function Navigation() {
               <a href="#education" className="nav-link">Education</a>
               <a href="#experience" className="nav-link">Experience</a>
               <a href="#projects" className="nav-link">Projects</a>
+              <a href="#certifications" className="nav-link">Certifications</a>
               <a href="#leadership" className="nav-link">Leadership</a>
               <a href="#contact" className="nav-link">Contact</a>
             </div>
@@ -48,6 +49,7 @@ export default function Navigation() {
             <a href="#education" className="nav-link" onClick={closeMobileMenu}>Education</a>
             <a href="#experience" className="nav-link" onClick={closeMobileMenu}>Experience</a>
             <a href="#projects" className="nav-link" onClick={closeMobileMenu}>Projects</a>
+            <a href="#certifications" className="nav-link" onClick={closeMobileMenu}>Certifications</a>
             <a href="#leadership" className="nav-link" onClick={closeMobileMenu}>Leadership</a>
             <a href="#contact" className="nav-link" onClick={closeMobileMenu}>Contact</a>
           </div>

@@ -5,6 +5,7 @@ import { ChevronDown, Brain, Eye, TrendingUp, Bot, Database, Users, TestTube, Ba
 import elixirLogo from "@assets/elixir_1753848924870.png";
 import organicLogo from "@assets/organic_1753848924871.png";
 import uscViterbiLogo from "@assets/USC-viterbi_1753848924872.png";
+import endevoLogo from "@assets/endevo_digitallegacy_logo.png";
 
 export default function Experience() {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
@@ -19,6 +20,47 @@ export default function Experience() {
         <h2 className="text-4xl font-bold text-center mb-12">Work Experience</h2>
         
         <div className="space-y-8">
+          {/* ENDEVO Software Engineer Intern - Agentic AI */}
+          <div className="glass-effect rounded-3xl p-8 hover:scale-105 transition-all duration-300 cursor-pointer" onClick={() => toggleSection('endevo-swe')}>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-6">
+                <img 
+                  src={endevoLogo} 
+                  alt="ENDevo SWE" 
+                  className="w-24 h-24 rounded-full object-cover"
+                />
+                <div>
+                  <h3 className="text-2xl font-bold">Graduate Research Assistant</h3>
+                  <p className="text-xl text-gray-300">USC Viterbi, Los Angeles, California</p>
+                  <p className="text-gray-400">Feb 2026 - April 2026</p>
+                </div>
+              </div>
+              <ChevronDown 
+                className={`transition-transform duration-300 ${expandedSection === 'endevo-swe' ? 'rotate-180' : ''}`}
+                size={24}
+              />
+            </div>
+            
+            <div className={`expandable-section mt-6 ${expandedSection === 'endevo-swe' ? 'expanded' : ''}`}>
+              <div className="bg-gray-800 rounded-xl p-6">
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-start space-x-3">
+                    <Brain className="text-blue-400 mt-1 flex-shrink-0" size={16} />
+                    <span>Built multi-tool AI agent, RAG-grounded to client and competitor video transcripts, chaining web search, Google Sheets API, and LLM text generation for gap analysis and video scripts, achieving significant founder tone alignment, maintaining gap relevance, and driving 20% viewership increase</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <Eye className="text-blue-400 mt-1 flex-shrink-0" size={16} />
+                    <span>Architected end-to-end RAG pipeline for an AI life readiness coach using AWS Bedrock Claude, Titan Embed V2, Aurora pgvector, and DynamoDB, with semantic chunking and IVFFlat indexing across 4 domains, reducing hallucinated responses and improving contextual accuracy</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <TrendingUp className="text-green-400 mt-1 flex-shrink-0" size={16} />
+                    <span>Engineered an HR Analytics dashboard replacing PostgreSQL materialized views with AWS Glue PySpark batch jobs, reducing Aurora RDS I/O load by by decoupling analytical from transactional workloads, with a migration path to Amazon MSK Kafka for real-time streaming at scale.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
           {/* USC Research Assistant */}
           <div className="glass-effect rounded-3xl p-8 hover:scale-105 transition-all duration-300 cursor-pointer" onClick={() => toggleSection('usc-ra')}>
             <div className="flex items-center justify-between">

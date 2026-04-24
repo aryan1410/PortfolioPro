@@ -4,6 +4,7 @@ import FeaturedCarousel from "@/components/FeaturedCarousel";
 import Education from "@/components/Education";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
+import Certifications from "@/components/Certifications";
 import Leadership from "@/components/Leadership";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -80,6 +81,7 @@ export default function Home() {
       <Education />
       <Experience />
       <Projects />
+      <Certifications />
       <Leadership />
       <Contact />
       <Footer />
