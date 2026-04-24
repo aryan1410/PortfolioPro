@@ -30,8 +30,8 @@ export default function Experience() {
                   className="w-24 h-24 rounded-full object-cover"
                 />
                 <div>
-                  <h3 className="text-2xl font-bold">Graduate Research Assistant</h3>
-                  <p className="text-xl text-gray-300">USC Viterbi, Los Angeles, California</p>
+                  <h3 className="text-2xl font-bold">Software Engineer Intern - Agentic AI</h3>
+                  <p className="text-xl text-gray-300">ENDevo Inc., Los Angeles, California</p>
                   <p className="text-gray-400">Feb 2026 - April 2026</p>
                 </div>
               </div>
