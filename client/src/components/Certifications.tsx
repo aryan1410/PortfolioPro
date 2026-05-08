@@ -1,6 +1,7 @@
 import { ExternalLink, Award } from "lucide-react";
 import googleLogo from "@assets/google_logo.png";
 import ibmLogo from "@assets/ibm_logo.svg";
+import awsLogo from "@assets/aws_logo.svg";
 
 const certifications = [
   {
@@ -22,6 +23,16 @@ const certifications = [
     accentColor: "from-blue-600/20 to-cyan-500/10",
     badgeColor: "bg-cyan-700",
     tags: ["Machine Learning", "Regression", "Python", "Scikit-learn"],
+  },
+  {
+    title: "AWS Certified Machine Learning Engineer – Associate",
+    issuer: "Amazon Web Services",
+    platform: "Credly",
+    credentialUrl: "https://www.credly.com/badges/6868323a-5995-4663-9868-0623489ecd08/linked_in_profile",
+    logo: <img src={awsLogo} alt="AWS" className="w-12 h-auto object-contain" />,
+    accentColor: "from-orange-500/20 to-yellow-500/10",
+    badgeColor: "bg-orange-600",
+    tags: ["AWS", "Machine Learning", "MLOps", "Cloud"],
   },
   {
     title: "Exploratory Data Analysis for Machine Learning (Honors)",
