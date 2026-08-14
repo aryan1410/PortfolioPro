@@ -6,6 +6,7 @@ import elixirLogo from "@assets/elixir_1753848924870.png";
 import organicLogo from "@assets/organic_1753848924871.png";
 import uscViterbiLogo from "@assets/USC-viterbi_1753848924872.png";
 import endevoLogo from "@assets/endevo_digitallegacy_logo.png";
+import daiichiSankyoLogo from "@assets/daiichi_sankyo_logo.svg";
 
 export default function Experience() {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
@@ -20,6 +21,43 @@ export default function Experience() {
         <h2 className="text-4xl font-bold text-center mb-12">Work Experience</h2>
         
         <div className="space-y-8">
+          {/* Daiichi Sankyo AI/ML Intern */}
+          <div className="glass-effect rounded-3xl p-8 hover:scale-105 transition-all duration-300 cursor-pointer" onClick={() => toggleSection('daiichi-sankyo')}>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-6">
+                <img
+                  src={daiichiSankyoLogo}
+                  alt="Daiichi Sankyo"
+                  className="w-24 h-24 rounded-full object-cover"
+                />
+                <div>
+                  <h3 className="text-2xl font-bold">AI/ML Intern - Global Biostatistics and Data Management</h3>
+                  <p className="text-xl text-gray-300">Daiichi Sankyo Inc., Basking Ridge, New Jersey</p>
+                  <p className="text-gray-400">June 2026 - August 2026</p>
+                </div>
+              </div>
+              <ChevronDown
+                className={`transition-transform duration-300 ${expandedSection === 'daiichi-sankyo' ? 'rotate-180' : ''}`}
+                size={24}
+              />
+            </div>
+
+            <div className={`expandable-section mt-6 ${expandedSection === 'daiichi-sankyo' ? 'expanded' : ''}`}>
+              <div className="bg-gray-800 rounded-xl p-6">
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-start space-x-3">
+                    <Brain className="text-blue-400 mt-1 flex-shrink-0" size={16} />
+                    <span>Architected an offline AI-assisted SAS validation pipeline for ADaM clinical trial datasets, combining a structural SAS parser, sentence-transformer embeddings (MiniLM-L6-v2), and a quantized local LLM (3–8B GGUF via Ollama) in a 3-gate review framework covering existence, logic equivalence and semantic label check to generate PASS / REVIEW / FAIL verdicts across over 270 DATA steps per program, cutting code review time by 72%</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <Database className="text-green-400 mt-1 flex-shrink-0" size={16} />
+                    <span>Designed 4-layer synthetic clinical trial pipeline for EDC simulation, SDTM transformation, MedDRA medical coding, and CDISC compliance validation, producing 22 SDTM-compliant domains from across 76 EDC fields, cutting manual data prep time by 80%</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
           {/* ENDEVO Software Engineer Intern - Agentic AI */}
           <div className="glass-effect rounded-3xl p-8 hover:scale-105 transition-all duration-300 cursor-pointer" onClick={() => toggleSection('endevo-swe')}>
             <div className="flex items-center justify-between">
@@ -32,7 +70,7 @@ export default function Experience() {
                 <div>
                   <h3 className="text-2xl font-bold">Software Engineer Intern - Agentic AI</h3>
                   <p className="text-xl text-gray-300">ENDevo Inc., Los Angeles, California</p>
-                  <p className="text-gray-400">February 2026 - April 2026</p>
+                  <p className="text-gray-400">February 2026 - May 2026</p>
                 </div>
               </div>
               <ChevronDown 

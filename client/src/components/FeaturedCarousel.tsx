@@ -11,9 +11,14 @@ import workflowImage from "@assets/image_1755404592052.png"
 import dgenImage from "@assets/dgen.png";
 import deepResearcherImage from "@assets/research-agent.png";
 import endevoImage from "@assets/endevo_digitallegacy_logo.png";
+import daiichiSankyoImage from "@assets/daiichi_sankyo_logo.svg";
 
 export default function FeaturedCarousel() {
   const projects = [
+    {
+      title: "AI/ML Intern @ Daiichi Sankyo",
+      image: daiichiSankyoImage
+    },
     {
       title: "AI Research Agent",
       image: deepResearcherImage
